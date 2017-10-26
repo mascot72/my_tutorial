@@ -37,5 +37,5 @@ db.once('open', function(){
 var routerModule = require('./routes')(app, Book);
 // [RUN SERVER]
 var server = app.listen(port, function(){
-	console.log("Express server has started on port " + port);
+	console.log("Express server has started on port %s", port);
 });

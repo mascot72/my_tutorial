@@ -18,9 +18,21 @@ $ node app.js
 | /api/books/:book_id       | PUT    | book 데이터 수정          |
 | /api/books/:book_id       | DELETE | book 데이터 제거          |
 
-psuh
+push
 실행순서
 1. mongodb실행
 	mongod
 	mongo
 2. app실행
+
+0. 환경설정
+- babel
+npm i --save-dev babel-core babel-preset-es2015 babel-polyfill babel-plugin-transform-es3-member-expression-literals babel-plugin-transform-es3-property-literals
+.babelrc파일생성
+:{
+	"presets": ["es2015"],
+	"plugins": [
+	"transform-es3-property-literals",
+	"transform-es3-member-expression-literals"
+	]
+}
