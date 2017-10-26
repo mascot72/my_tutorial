@@ -30,11 +30,12 @@ var port = process.env.PORT || 8081;
 db.once('open', function(){
 	// CONNECTED TO MONGODB SERVER
 	console.log("Connected to mongod server");
-	// [CONFIGURE ROUTER]
-	var routerModule = require('./routes')(app, Book);
-	// [RUN SERVER]
-	var server = app.listen(port, function(){
-		console.log("Express server has started on port " + port);
-	});
+
 });
 
+// [CONFIGURE ROUTER]
+var routerModule = require('./routes')(app, Book);
+// [RUN SERVER]
+var server = app.listen(port, function(){
+	console.log("Express server has started on port %s", port);
+});
